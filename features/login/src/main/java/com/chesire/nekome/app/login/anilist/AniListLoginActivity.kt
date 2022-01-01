@@ -1,4 +1,4 @@
-package com.chesire.nekome.app.login
+package com.chesire.nekome.app.login.anilist
 
 import android.app.Activity
 import android.content.Intent

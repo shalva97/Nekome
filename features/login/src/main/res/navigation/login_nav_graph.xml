@@ -9,9 +9,9 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.chesire.nekome.app.login.details.DetailsFragment"
+        android:name="com.chesire.nekome.app.login.kitsu.DetailsFragment"
         android:label="@string/nav_details"
-        tools:layout="@layout/fragment_details">
+        tools:layout="@layout/fragment_kitsu_details">
         <action
             android:id="@+id/toSyncingFragment"
             app:destination="@id/syncingFragment" />

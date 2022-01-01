@@ -1,4 +1,4 @@
-package com.chesire.nekome.app.login.details
+package com.chesire.nekome.app.login.kitsu
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

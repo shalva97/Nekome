@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".AniListLoginActivity"
+            android:name=".anilist.AniListLoginActivity"
             android:exported="true">
 
             <intent-filter>

@@ -1,7 +1,9 @@
-package com.chesire.nekome.app.login.details
+package com.chesire.nekome.app.login.kitsu.details
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
+import com.chesire.nekome.app.login.kitsu.DetailsViewModel
+import com.chesire.nekome.app.login.kitsu.LoginStatus
 import com.chesire.nekome.core.Resource
 import com.chesire.nekome.datasource.auth.AccessTokenRepository
 import com.chesire.nekome.datasource.auth.AccessTokenResult

@@ -1,6 +1,5 @@
-package com.chesire.nekome.app.login.details
+package com.chesire.nekome.app.login.kitsu
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -10,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.chesire.nekome.app.login.R
-import com.chesire.nekome.app.login.databinding.FragmentDetailsBinding
+import com.chesire.nekome.app.login.databinding.FragmentKitsuDetailsBinding
 import com.chesire.nekome.core.extensions.hide
 import com.chesire.nekome.core.extensions.hideSystemKeyboard
 import com.chesire.nekome.core.extensions.setLinkedText
@@ -20,27 +19,23 @@ import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 import javax.inject.Inject
-import android.content.Intent
-import android.net.Uri
-import androidx.browser.customtabs.CustomTabsIntent
-
 
 /**
  * Fragment to allow the user to enter their login details for Kitsu.
  */
 @AndroidEntryPoint
-class DetailsFragment : Fragment(R.layout.fragment_details) {
+class DetailsFragment : Fragment(R.layout.fragment_kitsu_details) {
 
     @Inject
     lateinit var urlHandler: UrlHandler
 
     private val viewModel by viewModels<DetailsViewModel>()
-    private var _binding: FragmentDetailsBinding? = null
+    private var _binding: FragmentKitsuDetailsBinding? = null
     private val binding get() = requireNotNull(_binding) { "Binding not set" }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentDetailsBinding.bind(view)
+        _binding = FragmentKitsuDetailsBinding.bind(view)
 
         binding.usernameText.addTextChangedListener { binding.usernameLayout.error = "" }
         binding.passwordText.addTextChangedListener { binding.passwordLayout.error = "" }

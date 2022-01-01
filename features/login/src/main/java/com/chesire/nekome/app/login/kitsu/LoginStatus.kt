@@ -1,4 +1,4 @@
-package com.chesire.nekome.app.login.details
+package com.chesire.nekome.app.login.kitsu
 
 /**
  * Provides the status of a login request.
