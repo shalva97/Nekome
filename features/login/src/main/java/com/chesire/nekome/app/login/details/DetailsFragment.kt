@@ -1,5 +1,6 @@
 package com.chesire.nekome.app.login.details
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -19,6 +20,10 @@ import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 import javax.inject.Inject
+import android.content.Intent
+import android.net.Uri
+import androidx.browser.customtabs.CustomTabsIntent
+
 
 /**
  * Fragment to allow the user to enter their login details for Kitsu.
@@ -67,7 +72,10 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     }
 
     private fun executeLogin() {
-        viewModel.login(binding.usernameText.text.toString(), binding.passwordText.text.toString())
+        // viewModel.login(binding.usernameText.text.toString(), binding.passwordText.text.toString())
+        // DEBUG
+        val url = "https://anilist.co/api/v2/oauth/authorize?client_id=5117&response_type=token"
+        urlHandler.launch(requireContext(), url)
     }
 
     private fun loginStatusChanged(loginStatus: LoginStatus) {
